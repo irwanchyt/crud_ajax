@@ -31,7 +31,7 @@ class SiswaController extends Controller
         try{
 
             $siswa = new Siswa;
-            $siswa->name          = $request->name;
+            $siswa->name         = $request->name;
             $siswa->alamat        = $request->alamat;
             $siswa->jenis_kelamin = $request->jenis_kelamin;
 

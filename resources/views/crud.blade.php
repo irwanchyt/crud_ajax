@@ -87,7 +87,7 @@
                 <div class="modal-footer">
                     @csrf
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success" id="btn_save">Save</button>
                 </div>
             </div>
             </div>

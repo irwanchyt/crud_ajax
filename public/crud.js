@@ -102,6 +102,10 @@ $(function(){
                 url:'siswa/create',
                 type:'POST',
                 data: $(form).serialize(),
+                beforeSend: function(){
+
+                    $('#btn_save').prop('disabled',true).html('loading...')
+                },
                 success: function(res){
                     ajaxData()
                     alert(res.message)                  
@@ -111,10 +115,12 @@ $(function(){
                 },
                 error: function(err){
 
-
+                    alert(err.responseJSON.message)
                 },
                 complete: function(){
 
+                    $('#btn_save').prop('disabled',false).html('loading...')
+                    $('#btn_save').html('save')
 
                 }
 
